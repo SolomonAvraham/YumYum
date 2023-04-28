@@ -22,7 +22,7 @@ app.use("/auth", userRouter);
 app.use("/recipes", recipesRouter);
 
 app.get("/", (req, res) => {
-  res.sendStatus(200).send({ msg: "successfully" });
+  res.send({ msg: "successfully" }).sendStatus(200);
 });
 
 app.listen(port, () => DB, console.log("Server started"));
