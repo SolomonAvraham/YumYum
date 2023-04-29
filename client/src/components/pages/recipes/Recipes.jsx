@@ -32,13 +32,16 @@ function Recipes() {
 
   const savedRecipeHandler = async (recipeId, userId) => {
     try {
-      const res = await fetch(`http://localhost:8000/recipes/updateRecipe`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ recipeId, userId }),
-      });
+      const res = await fetch(
+        `http://yumyum-incj.onrender.com/recipes/updateRecipe`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ recipeId, userId }),
+        }
+      );
       return await res
         .json()
         .then((res) =>

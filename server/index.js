@@ -11,7 +11,7 @@ const port = 8000;
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://127.0.0.1:5174",
+    origin: "*",
     methods: ["POST", "GET", "PUT"],
     credentials: true,
   })

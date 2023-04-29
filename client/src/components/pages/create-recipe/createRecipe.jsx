@@ -31,14 +31,17 @@ export const CreateRecipe = () => {
     },
     onSubmit: async (values) => {
       try {
-        const res = await fetch(`http://localhost:8000/recipes/createRecipe`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${auth}`,
-          },
-          body: JSON.stringify(values),
-        });
+        const res = await fetch(
+          `http://yumyum-incj.onrender.com/recipes/createRecipe`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${auth}`,
+            },
+            body: JSON.stringify(values),
+          }
+        );
         await res.json().then((res) => {
           setRecipeID(res.createdRecipe._id), setCard(res.createdRecipe);
         });

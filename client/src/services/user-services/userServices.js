@@ -1,18 +1,22 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const signInUser = createAsyncThunk("sign-In", async (body) => {
-  const res = await fetch("http://localhost:8000/auth/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
-  });
-  return await res.json();
+  try {
+    const res = await fetch("http://yumyum-incj.onrender.com/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+    return await res.json();
+  } catch (error) {
+    console.error(error);
+  }
 });
 
 export const signUpUser = createAsyncThunk("sign-Up", async (body) => {
-  const res = await fetch("http://localhost:8000/auth/register", {
+  const res = await fetch("http://yumyum-incj.onrender.com/auth/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -36,7 +40,7 @@ export const signUpUser = createAsyncThunk("sign-Up", async (body) => {
 
 export const getUser = async (token) => {
   try {
-    const res = await fetch(`http://localhost:8000/auth/`, {
+    const res = await fetch(`http://yumyum-incj.onrender.com/auth/`, {
       method: "POST",
       credentials: "include",
       headers: {
@@ -45,11 +49,10 @@ export const getUser = async (token) => {
       },
       body: JSON.stringify({
         token,
-      }),     
+      }),
     });
     return await res.json();
   } catch (error) {
     console.log(error);
   }
 };
- 
