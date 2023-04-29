@@ -7,6 +7,7 @@ export const signInUser = createAsyncThunk("sign-In", async (body) => {
       headers: {
         "Content-Type": "application/json",
       },
+      credentials: "include",
       body: JSON.stringify(body),
     });
     return await res.json();
