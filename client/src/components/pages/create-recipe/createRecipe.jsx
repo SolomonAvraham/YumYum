@@ -32,7 +32,7 @@ export const CreateRecipe = () => {
     onSubmit: async (values) => {
       try {
         const res = await fetch(
-          `http://yumyum-incj.onrender.com/recipes/createRecipe`,
+          `https://yumyum-incj.onrender.com/recipes/createRecipe`,
           {
             method: "POST",
             headers: {

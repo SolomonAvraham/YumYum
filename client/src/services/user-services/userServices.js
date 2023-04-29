@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const signInUser = createAsyncThunk("sign-In", async (body) => {
   try {
-    const res = await fetch("http://yumyum-incj.onrender.com/auth/login", {
+    const res = await fetch("https://yumyum-incj.onrender.com/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -17,7 +17,7 @@ export const signInUser = createAsyncThunk("sign-In", async (body) => {
 });
 
 export const signUpUser = createAsyncThunk("sign-Up", async (body) => {
-  const res = await fetch("http://yumyum-incj.onrender.com/auth/register", {
+  const res = await fetch("https://yumyum-incj.onrender.com/auth/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -41,7 +41,7 @@ export const signUpUser = createAsyncThunk("sign-Up", async (body) => {
 
 export const getUser = async (token) => {
   try {
-    const res = await fetch(`http://yumyum-incj.onrender.com/auth/`, {
+    const res = await fetch(`https://yumyum-incj.onrender.com/auth/`, {
       method: "POST",
       credentials: "include",
       headers: {

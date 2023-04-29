@@ -33,7 +33,7 @@ function Recipes() {
   const savedRecipeHandler = async (recipeId, userId) => {
     try {
       const res = await fetch(
-        `http://yumyum-incj.onrender.com/recipes/updateRecipe`,
+        `https://yumyum-incj.onrender.com/recipes/updateRecipe`,
         {
           method: "PUT",
           headers: {
