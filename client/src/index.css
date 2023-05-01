@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Lobster+Two&family=Satisfy&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background: #696868;
+}
 
-body{
-    background: #696868;
+::-webkit-input-placeholder {
+  text-align: center;
 }

@@ -19,7 +19,7 @@ const ContactForm = () => {
   });
 
   const handleSubmit = (values, { setSubmitting, resetForm }) => {
-    alert(JSON.stringify(values, null, 2));
+    alert("Thanks!");
     resetForm();
     setSubmitting(false);
   };
@@ -28,24 +28,26 @@ const ContactForm = () => {
     <>
       <div className=" bg-center bg-cover relative   bg-fixed bg-[url('/imgs/3.jpg')]">
         <div className="bg-gray-500 bg-opacity-50   flex items-center justify-center ">
-          <div className="    md:p-10  min-h-screen">
-            <div className="mt-5  flex  w-full max-w-screen-lg p-10 gap-10 bg-white rounded shadow-md h-full">
-              <div className=" mt-10 ">
+          <div className=" py-20   md:p-10  min-h-screen">
+            <div className="mt-5  flex  items-center w-full max-w-screen-lg p-10 gap-10 bg-white rounded shadow-md h-full">
+              <div className=" md:mr-10  ">
                 <img
                   src="/icons/icon.png"
                   alt="icon"
-                  className="w-20 drop-shadow-2xl  py-10 mx-auto"
-                />{" "}
-                <h1 className=" font-semibold p-5 text-4xl text-center">
-                  Contact us
-                </h1>
+                  className="w-16 drop-shadow-2xl  py-5 mx-auto"
+                />
+                <div className="bg-center font-two  rounded-2xl p-2   bg-[url('/imgs/4.jpg')]">
+                  <h1 className="font-bold text-center text-white text-6xl ">
+                    Contact us
+                  </h1>
+                </div>
                 <Formik
                   initialValues={initialValues}
                   validationSchema={validationSchema}
                   onSubmit={handleSubmit}
                 >
                   {(formik) => (
-                    <Form className="font-semibold flex flex-col  gap-5 justify-center p-7 ">
+                    <Form className="font-semibold flex flex-col  gap-2 justify-center p-12  ">
                       {!username && <label htmlFor="name">Name</label>}
                       <Field
                         type="text"
@@ -87,7 +89,7 @@ const ContactForm = () => {
                 </Formik>
               </div>
 
-              <div className="hidden w-96 md:block">
+              <div className="hidden w-7/12 md:block">
                 <img src="/imgs/4.jpg" alt="" />
               </div>
             </div>

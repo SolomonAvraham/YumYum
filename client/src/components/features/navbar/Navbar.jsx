@@ -27,7 +27,7 @@ export const Navbar = () => {
 
   return (
     <nav className=" sticky top-0  z-10 bg-[#76a561] shadow-xl">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-1">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
@@ -75,27 +75,30 @@ export const Navbar = () => {
             </button>
           </div>
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-            <a href="/" className="">
+            <a href="/">
               <img
-                className=" w-10  px-1   py-1 "
+                className=" w-10  px-1   py-1"
                 src="icons/icon.png"
                 alt="icon"
               />
             </a>
             <div className="flex-shrink-0 ml-2">
-              <a href="/" className="text-white font-bold text-2xl">
-                Yum Yum
+              <a
+                href="/"
+                className=" text-lime-950 hover:text-white font-three font-extrabold text-3xl"
+              >
+                YumYum
               </a>
             </div>
             <div className="hidden sm:block sm:ml-6">
-              <div className="flex space-x-4">
+              <div className="flex space-x-4   ">
                 {pages?.map((page) => (
                   <a
                     key={page}
                     href={`/${page.toLocaleLowerCase()}`}
                     className={`
                     ${lastPath === page.toLocaleLowerCase() && "text-stone-950"}
-                    text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium`}
+                    text-gray-300 text-2xl font-extrabold font-one hover:bg-gray-700 hover:text-white px-3 py-1 rounded-md shadow-2xl `}
                   >
                     {page}
                   </a>
@@ -107,7 +110,7 @@ export const Navbar = () => {
             href="/profile"
             className={`${
               lastPath === "profile" && "text-stone-950"
-            } hover:text-slate-400 text-xl text-white  p-5`}
+            }  text-2xl font-extrabold font-one hover:text-slate-400 text-white  p-5`}
           >
             {user && user}
           </a>
@@ -120,7 +123,7 @@ export const Navbar = () => {
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
-            <span className="   text-3xl text-white  ">
+            <span className="  text-3xl text-white  ">
               <FaUserCircle />
             </span>
           </button>
@@ -140,7 +143,7 @@ export const Navbar = () => {
                   className={` ${
                     lastPath === page.name.toLocaleLowerCase() &&
                     "text-stone-950"
-                  } text-white text-xl hover:bg-slate-800  hover:w-96 hover:text-center`}
+                  }  text-white text-xl hover:bg-slate-800  hover:w-96 hover:text-center`}
                 >
                   {page.name}
                 </a>
@@ -152,13 +155,13 @@ export const Navbar = () => {
             <>
               <a
                 href="/register"
-                className=" text-white text-lg hover:bg-slate-800   hover:w-96 hover:text-center"
+                className="font-two text-white text-2xl hover:bg-slate-800   hover:w-96 hover:text-center"
               >
                 Sign Up
               </a>
               <a
                 href="/login"
-                className=" text-white text-lg hover:bg-slate-800   hover:w-96 hover:text-center"
+                className="font-two text-2xl text-white  hover:bg-slate-800   hover:w-96 hover:text-center"
               >
                 Login
               </a>
@@ -167,7 +170,7 @@ export const Navbar = () => {
             <a
               href="/"
               onClick={() => dispatch(logout())}
-              className=" text-white text-xl hover:bg-slate-800   hover:w-96 hover:text-center"
+              className="font-two text-2xl text-white hover:bg-slate-800   hover:w-96 hover:text-center"
             >
               Log out
             </a>
@@ -185,7 +188,7 @@ export const Navbar = () => {
               href={`/${page.toLocaleLowerCase()}`}
               className={` ${
                 lastPath === page.toLocaleLowerCase() && "text-stone-950"
-              } text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium`}
+              } font-one text-gray-300 hover:bg-gray-700 hover:text-white px-7  rounded-md text-4xl font-medium`}
             >
               {page}
             </a>

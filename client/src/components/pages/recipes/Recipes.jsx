@@ -71,9 +71,11 @@ function Recipes() {
                 </div>
               ) : !card ? (
                 <>
-                  <h1 className="font-bold text-center text-5xl py-10">
-                    All Recipes
+                  <h1 className="font-bold text-white text-7xl pb-3 pt-10 font-two    bg-[url('/imgs/1.jpg')]">
+                    Recipes
                   </h1>
+                  <p className="  text-xl  font-two"> Recipes For All...</p>
+                  <hr className="mb-10 md:w-52 shadow-2xl" />
                   <div className=" flex flex-wrap items-center justify-center  p-5  gap-5">
                     {isRecipes?.map((recipe, index) => (
                       <RecipeCard

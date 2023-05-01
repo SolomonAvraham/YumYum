@@ -7,7 +7,11 @@ function About() {
         <div className="bg-gray-500 bg-opacity-50  ">
           <div className="flex md:p-10 flex-col items-center justify-center   min-h-screen">
             <div className="w-full max-w-screen-lg p-8 bg-white rounded shadow-md">
-              <h1 className="text-4xl text-center font-bold mb-4">About us</h1>
+              <h1 className="font-bold text-white text-7xl pb-3 pt-10 font-two    bg-[url('/imgs/1.jpg')]">
+                About us
+              </h1>
+              <p className=" font-extrabold text-2xl  font-three mt-1 text-[#507240]"> YumYum</p>
+              <hr className="mb-10 md:w-52 shadow-2xl" />
               <p className="mb-8">
                 Hello and welcome to my food recipe website! My name is John and
                 I'm a food enthusiast. I love cooking and trying out new
