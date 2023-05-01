@@ -11,7 +11,7 @@ const port = 8000;
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://yumyum-recipes.netlify.app",
+    origin: "*",
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   })
@@ -22,7 +22,7 @@ app.use("/auth", userRouter);
 app.use("/recipes", recipesRouter);
 
 app.get("/", (req, res) => {
-  res.send({ msg: "successfully" }).sendStatus(200);
+  res.send({ msg: "successfully" });
 });
 
 app.listen(port, () => DB, console.log("Server started"));
