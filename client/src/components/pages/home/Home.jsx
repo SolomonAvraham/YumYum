@@ -67,11 +67,13 @@ export function Home() {
                 </div>
               </>
             ) : (
-                <>
-                  <h1 className="  space-x-10">Click Here and check your profile to see your saved recipes</h1>
-                <button className=" hover:bg-green-200 p-2 rounded-md bg-white">
+              <>
+                <h1 className="  space-x-10 mt-10 max-w-2xl p-4 md:p-0 text-xl md:text-2xl  font-extrabold text-white  lg:mx-auto font-one">
+                  Click the button and check your profile to see your saved recipes
+                </h1>
+                <button className=" hover:bg-green-200 p-2 tracking-widest w-24 font-extrabold text-2xl mt-5 font-one rounded-md bg-white">
                   <a href="/profile">{user}</a>
-                </button> 
+                </button>
               </>
             )}
           </div>
