@@ -11,7 +11,7 @@ const port = 8000;
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://yumyum-recipes.netlify.app",
+    origin: process.env.ORIGIN && process.env.LOCAL,
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   })
